@@ -16,8 +16,18 @@ function login($email, $password, $conn) {
         if (password_verify($password, $row['password'])) {
             $_SESSION['user'] = true;
             $_SESSION['email'] = $row['email'];
-            header('location: ../index.php');
-            exit();
+            $role = $row['role'];
+            if($role == 'Admin') {
+                header('location: ../admin-dashboard.php');
+
+            }
+
+            else {
+                header('location: ../index.php');
+                exit();
+            }
+
+            
         } else {
             echo "<script>alert('Password is incorrect');</script>";
         }
