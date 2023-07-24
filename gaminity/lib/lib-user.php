@@ -18,7 +18,7 @@ function login($email, $password, $conn) {
             $_SESSION['email'] = $row['email'];
             $role = $row['role'];
             if($role == 'Admin') {
-                header('location: ../admin-dashboard.php');
+                header('location: ../admin/index.php');
 
             }
 
