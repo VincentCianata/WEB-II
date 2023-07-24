@@ -243,9 +243,7 @@ if (isset($_POST['co'])) {
                 </div>
                 <div>
                     <button class="btn text-white" style="background: rgba(44, 47, 54, 1);"> <?php echo priceFormat($game_info['price']) ?></button>
-                    <button class="btn btn-success">
-                        Buy Now
-                    </button>
+
                 </div>
             </div>
         </div>
